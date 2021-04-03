@@ -20,11 +20,13 @@ $(NAME):
 				@echo -e "\033[1m\033[31mCompilation\033[0m \033[34msuccessful\033[21m\033[0m"
 
 clean:
-				@rm $(NAME)
+				@rm -f $(NAME)
 				@echo -e "\033[35mRm $(NAME)\033[0m"
 
 fclean: clean
-				rm $(NAME)
+				rm -f $(NAME)
+
+tests_run: $(NAME)
 
 re: clean all
 
